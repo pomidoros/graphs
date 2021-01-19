@@ -1,75 +1,59 @@
-from typing import TypeVar, Generic, List, Optional
-from edge import Edge
-from search_algorithms import bfs, node_to_path, Node
-import sys
+from typing import Generic, TypeVar, List
+from graphs.edge import Edge
+from algorithms.short_distance_search import bfs, node_to_path
 
 
-T = TypeVar("T")  # type of graphs's vertex
+V = TypeVar("V")
 
 
-class Graph(Generic[T]):
-    def __init__(self, vertices: List[T] = []) -> None:
-        self._vertices: List[T] = vertices
-        self._edges: List[List[Edge]] = [[] for _ in self._vertices]
+class Graph(Generic[V]):
+    def __init__(self, vertices: List[V] = []) -> None:
+        self._vertices: List[V] = vertices
+        self._edges: List[List[Edge]] = [[] for _ in vertices]
 
-    # counts of vertices
     @property
     def vertex_count(self) -> int:
         return len(self._vertices)
 
-    # count of edges
     @property
-    def edge_count(self) -> int:
+    def edges_count(self) -> int:
         return sum(map(len, self._edges))
 
-    # add vertex to graph
-    def add_vertex(self, vertex: T) -> None:
+    def add_vertex(self, vertex: V) -> None:
         self._vertices.append(vertex)
         self._edges.append([])
-        return self.vertex_count - 1  # return index of added vertex
 
-    # we should to add both edges because the graph is undirected
+    def index_of(self, vertex: V) -> int:
+        return self._vertices.index(vertex)
+
+    def vertex_at(self, index: int) -> V:
+        return self._vertices[index]
+
     def add_edge(self, edge: Edge) -> None:
         self._edges[edge.u].append(edge)
-        self._edges[edge.v].append(edge.reversed())
+        self._edges[edge.v].append(edge.reverse())
 
-    # add edge by indexes
     def add_edge_by_indices(self, u: int, v: int) -> None:
         edge = Edge(u, v)
         self.add_edge(edge)
 
-    # add edge by names of vertices
-    def add_edge_by_vertices(self, first: T, second: T) -> None:
-        u = self._vertices.index(first)
-        v = self._vertices.index(second)
+    def add_edge_by_vertices(self, first, second) -> None:
+        u = self.index_of(first)
+        v = self.index_of(second)
         self.add_edge_by_indices(u, v)
 
-    # return name of vertex by its index
-    def vertex_at(self, ind: int) -> T:
-        return self._vertices[ind]
+    def neighbors_by_index(self, index: int) -> List[V]:
+        return list(map(self.vertex_at, [el.v for el in self.edges_for_index(index)]))
 
-    # return index of vertex by its name
-    def index_of(self, vert: T) -> int:
-        return self._vertices.index(vert)
-
-    def neighbors_for_index(self, index: int) -> List[T]:
-        return list(map(self.vertex_at, [e.v for e in self._edges[index]]))
-
-    def neighbors_for_vertices(self, vertex: T) -> List[T]:
+    def neighbors_by_vertex(self, vertex: V) -> List[V]:
         index = self.index_of(vertex)
-        return self.neighbors_for_index(index)
+        return self.neighbors_by_index(index)
 
     def edges_for_index(self, index: int) -> List[Edge]:
         return self._edges[index]
 
-    def edges_for_vertex(self, vertex: T) -> List[Edge]:
-        return self.edges_for_index(self.index_of(vertex))
-
-    def __str__(self) -> str:
-        string = ""
-        for i in range(self.vertex_count):
-            string += f"{self.vertex_at(i)} -> {self.neighbors_for_index(i)} \n"
-        return string
+    def edges_for_vertex(self, vertex: V) -> List[Edge]:
+        return self._edges[self.index_of(vertex)]
 
     def test_adding(self):
         self.add_edge_by_vertices("Seattle", "Chicago")
@@ -94,17 +78,23 @@ class Graph(Generic[T]):
         self.add_edge_by_vertices("New York", "Philadelphia")
         self.add_edge_by_vertices("Philadelphia", "Washington")
 
+    def __str__(self) -> str:
+        string = ""
+        for i in range(self.vertex_count):
+            string += f"{self._vertices[i]} -> {self.neighbors_by_index(i)} \n"
+        return string
+
 
 if __name__ == "__main__":
     list_of_cites: List[str] = ["Seattle", "San Francisco", "Los Angeles", "Riverside", "Phoenix", "Chicago", "Boston",
                                 "New York", "Atlanta", "Miami", "Dallas", "Houston", "Detroit", "Philadelphia",
                                 "Washington"]
-    new_graph: Graph[str] = Graph(list_of_cites)
-    new_graph.test_adding()
-    bfs_result: Optional[Node] = bfs("Boston", lambda x: x == "Miami", new_graph.neighbors_for_vertices)
-    if bfs_result is None:
-        print("Haven't")
+    city_graph = Graph(list_of_cites)
+    city_graph.test_adding()
+    # используем стандартный алгоритм поиска в ширину
+    result_search = bfs("Boston", lambda x: x == "Miami", city_graph.neighbors_by_vertex)
+    if result_search is not None:
+        path = node_to_path(result_search)
+        print(path)
     else:
-        print(node_to_path(bfs_result))
-
-
+        print("Haven't")

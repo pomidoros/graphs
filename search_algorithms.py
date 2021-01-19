@@ -1,6 +1,6 @@
 from typing import TypeVar, Callable, Optional, List, Generic, Deque, Set
 from collections import deque
-
+from heapq import heappop, heappush
 
 # type of cell
 T = TypeVar('T')
@@ -21,6 +21,20 @@ class Queue(Generic[T]):
         return not self._container
 
     def __repr__(self):
+        return repr(self._container)
+
+
+class PriorityQueue(Generic[T]):
+    def __init__(self) -> None:
+        self._container: List[T] = []
+
+    def push(self, item: T) -> None:
+        heappush(self._container, item)
+
+    def pop(self):
+        return heappop(self._container)
+
+    def __repr__(self) -> str:
         return repr(self._container)
 
 

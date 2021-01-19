@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58736d58-8f88-4773-9851-cfa2a98ec63e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search_algorithms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/minimum_spanning_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/short_distance_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphs/edge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphs/graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphs/weighted_edge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphs/weighted_graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markdown_photos/graphs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markdown_photos/main_structure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markdown_photos/structures.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/structures/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/structures/abstract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/structures/priority.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/structures/queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weighted_edge.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_algorithms.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/markdown_photos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,8 +59,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
-  <component name="RunManager" selected="Python.graph">
-    <configuration name="edge" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/markdown_photos" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.minimum_spanning_tree">
+    <configuration name="graph (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="graphs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -53,12 +73,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graphs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/edge.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graphs/graph.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="minimum_spanning_tree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="graphs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,12 +117,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/minimum_spanning_tree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,12 +153,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="weighted_graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="graphs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graphs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graphs/weighted_graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.minimum_spanning_tree" />
+        <item itemvalue="Python.weighted_graph" />
+        <item itemvalue="Python.graph (1)" />
         <item itemvalue="Python.graph" />
         <item itemvalue="Python.search_algorithms" />
-        <item itemvalue="Python.edge" />
-        <item itemvalue="Python.new" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +195,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610967619631</updated>
-      <workItem from="1610967627008" duration="8120000" />
+      <workItem from="1610967627008" duration="34963000" />
     </task>
     <servers />
   </component>
@@ -160,22 +203,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1874" height="279" key="GridCell.Tab.0.bottom" timestamp="1610976386780">
+    <state width="1874" height="279" key="GridCell.Tab.0.bottom" timestamp="1611026082838">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="279" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1610976386780" />
-    <state width="1874" height="279" key="GridCell.Tab.0.center" timestamp="1610976386779">
+    <state width="1874" height="279" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1611026082838" />
+    <state width="1874" height="279" key="GridCell.Tab.0.center" timestamp="1611026082837">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="279" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1610976386779" />
-    <state width="1874" height="279" key="GridCell.Tab.0.left" timestamp="1610976386779">
+    <state width="1874" height="279" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1611026082837" />
+    <state width="1874" height="279" key="GridCell.Tab.0.left" timestamp="1611026082837">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="279" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1610976386779" />
-    <state width="1874" height="279" key="GridCell.Tab.0.right" timestamp="1610976386780">
+    <state width="1874" height="279" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1611026082837" />
+    <state width="1874" height="279" key="GridCell.Tab.0.right" timestamp="1611026082838">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="279" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1610976386780" />
+    <state width="1874" height="279" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1611026082838" />
     <state x="646" y="301" width="766" height="568" key="find.popup" timestamp="1610973914480">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -186,7 +229,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/search_algorithms.py</url>
-          <line>62</line>
+          <line>76</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -195,7 +238,10 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/graphs$new.coverage" NAME="new Coverage Results" MODIFIED="1610969144911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/graphs$search_algorithms.coverage" NAME="search_algorithms Coverage Results" MODIFIED="1610974962174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/graphs$graph.coverage" NAME="graph Coverage Results" MODIFIED="1610976386768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/graphs$graph.coverage" NAME="graph Coverage Results" MODIFIED="1611002819571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/graphs$minimum_spanning_tree.coverage" NAME="minimum_spanning_tree Coverage Results" MODIFIED="1611026082823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms" />
     <SUITE FILE_PATH="coverage/graphs$edge.coverage" NAME="edge Coverage Results" MODIFIED="1610973648225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/graphs$weighted_graph.coverage" NAME="weighted_graph Coverage Results" MODIFIED="1611025581044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graphs" />
+    <SUITE FILE_PATH="coverage/graphs$graph__1_.coverage" NAME="graph (1) Coverage Results" MODIFIED="1611022862800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graphs" />
   </component>
 </project>
